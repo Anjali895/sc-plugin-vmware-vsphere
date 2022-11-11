@@ -25,28 +25,8 @@
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
-  <!-- Controls AsciiDoctor Admonition Blocks -->
-  <link rel="stylesheet" type="text/css" href="/us-en/sc-plugin-vmware-vsphere/css/font-awesome.min.css">
-
-  <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/us-en/sc-plugin-vmware-vsphere/css/boxshadowproperties.css">
-
-  <!-- NetApp CSS controls the technical content -->
-  <link rel="stylesheet" type="text/css" href="/us-en/sc-plugin-vmware-vsphere/css/netapp.css">
-
-  <!-- WWW CSS Content -->
-  <link rel="stylesheet" type="text/css" href="/us-en/sc-plugin-vmware-vsphere/css/www-luci-dotcom.min.css">
-  <link rel="stylesheet" type="text/css" href="/us-en/sc-plugin-vmware-vsphere/css/www-netapp-dotcom.css">
-  <link rel="stylesheet" href="/us-en/sc-plugin-vmware-vsphere/css/www-netapp-library-critical.min.css" media="all" >
-  <link rel="stylesheet" href="/us-en/sc-plugin-vmware-vsphere/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="/us-en/sc-plugin-vmware-vsphere/css/www-netapp-library-global-header-footer.min.css">
-
-  <!-- NetApp IE Customizations -->
-  <link rel="stylesheet" href='/us-en/sc-plugin-vmware-vsphere/css/na-utility.css' type='text/css'>
-  <link rel="stylesheet" href='/us-en/sc-plugin-vmware-vsphere/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/sc-plugin-vmware-vsphere/css/clouddocs.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/sc-plugin-vmware-vsphere/css/custom-dropdown.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/sc-plugin-vmware-vsphere/css/na-pagenav.css' type='text/css'>
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/us-en/sc-plugin-vmware-vsphere/css/netappdocs.css">
 
   
   <link rel="stylesheet" href="/us-en/sc-plugin-vmware-vsphere/css/landing-page.css" type="text/css">
@@ -98,11 +78,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/sc-plugin-vmware-vsphere/js/na-search.js'></script><script src='/us-en/sc-plugin-vmware-vsphere/js/na-pagenav.js'></script><link rel='stylesheet' href='/us-en/sc-plugin-vmware-vsphere/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/sc-plugin-vmware-vsphere/css/prism-netapp.css' type='text/css'>
-
-
-  <script src='/us-en/sc-plugin-vmware-vsphere/js/na-utility.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/sc-plugin-vmware-vsphere/js/na-search.js'></script><script src='/us-en/sc-plugin-vmware-vsphere/js/na-pagenav.js'></script><script src='/us-en/sc-plugin-vmware-vsphere/js/na-utility.js'></script>
   <script src='/us-en/sc-plugin-vmware-vsphere/js/clouddocs.js'></script>
   <script src='/us-en/sc-plugin-vmware-vsphere/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -141,6 +117,17 @@
           $("#expandAll").click(function(e) {
               e.preventDefault();
               $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/us-en/sc-plugin-vmware-vsphere"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
           });
 
       });
@@ -968,7 +955,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Concepts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Product overview"
@@ -1033,7 +1020,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Get started</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Deployment Overview"
@@ -1063,7 +1050,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Requirements for deploying SCV</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Deployment planning and requirements"
@@ -1121,7 +1108,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Quick start</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -1172,7 +1159,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Monitor and report</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="View status information"
@@ -1223,7 +1210,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage storage</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Add storage"
@@ -1253,7 +1240,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Protect data</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Data protection workflow"
@@ -1346,7 +1333,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Mount and unmount datastores</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Mount a backup"
@@ -1369,7 +1356,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore from backups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -1448,7 +1435,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Restore guest files and folders</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Workflow, prerequisites, and limitations"
@@ -1499,7 +1486,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage SnapCenter Plug-in for VMware vSphere appliance</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Restart the VMware vSphere web client service"
@@ -1557,7 +1544,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage your configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Modify time zones"
@@ -1622,7 +1609,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> REST APIs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -1722,7 +1709,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Upgrade</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade from an earlier release of SnapCenter Plug-in for VMware vSphere"
@@ -1762,6 +1749,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
