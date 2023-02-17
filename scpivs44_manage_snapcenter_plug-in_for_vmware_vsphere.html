@@ -233,15 +233,12 @@
           <li class="n-top-hat__list-item">
             <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
           </li>
-          <li class="n-top-hat__list-item">
-            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
-          </li>
         </ul>
       </div>
       <div class="n-top-hat__utils">
         <ul class="n-top-hat__list">
           <li class="n-top-hat__list-item">
-            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
           </li>
         </ul>
       </div>
@@ -325,47 +322,20 @@
         </li><li>
           <a href="https://docs.netapp.com/ja-jp/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
+          <a href="https://docs.netapp.com/ko-kr/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
           <a href="https://docs.netapp.com/zh-cn/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
           <a href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/de-de/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li><li>
           <a href="https://docs.netapp.com/fr-fr/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
-        </li><li>
-          <a href="https://docs.netapp.com/de-de/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
   </div>
-  <script>
-    $(function(){
-        var currentLocalization = $('html').attr('lang');
-
-        var localizationsDictionary = {
-            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
-            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
-            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
-            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
-            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
-            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
-            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
-            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
-            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
-            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
-            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
-            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
-            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
-            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
-            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
-        };
-
-        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
-            $('.n-property-bar__property-link').attr('href', '/');
-        }
-    });
-  </script>
   <!-- End property bar -->
 </header>
 
@@ -1846,7 +1816,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-22 12:17:45 +0000">12/22/2022</time>
+    <time datetime="2023-02-17 05:56:11 +0000">02/17/2023</time>
     
   
 
@@ -1937,44 +1907,48 @@ After deployment, modify the default login credentials.
 <li>
 <p>Option 1: Application Configuration</p>
 <div class="paragraph">
-<p>Start or stop SnapCenter VMware plug-in service<br>
-Change login username or password<br>
-Change MySQL password<br>
-Configure MySQL backup<br>
-List MySQL backups<br>
-Restore MySQL backup</p>
+<p>1) Display SnapCenter Plug-in for VMware vSphere summary<br>
+2) Start SnapCenter Plug-in for VMware vSphere services<br>
+3) Stop SnapCenter Plug-in for VMware vSphere services<br>
+4) Change username and password to login SnapCenter Plug-in for VMware vSphere UI<br>
+5) Change MySQL password<br>
+6) MySQL backup and restore</p>
 </div>
 </li>
 <li>
 <p>Option 2: System Configuration</p>
 <div class="paragraph">
-<p>Reboot or shutdown virtual machine<br>
-Change 'maint' user password<br>
-Change time zone<br>
-Change NTP server<br>
-Enable/Disable SSH Access<br>
-Increase jail disk size (/jail)<br>
-Upgrade<br>
-Install VMware Tools</p>
+<p>1) Reboot virtual machine<br>
+2) Shut down virtual machine<br>
+3) Change 'maint' user password<br>
+4) Change time zone<br>
+5) Change NTP server<br>
+6) Disable SSH access<br>
+7) Increase jail disk size (/jail)<br>
+8) Upgrade<br>
+9) Install VMware Tools</p>
 </div>
 </li>
 <li>
 <p>Option 3: Network Configuration</p>
 <div class="paragraph">
-<p>Display or change IP address settings<br>
-Display or change domain name search settings<br>
-Display or change static routes<br>
-Commit changes<br>
-Ping a host</p>
+<p>1) Display IP address settings<br>
+2) Change IP address settings<br>
+3) Display domain name search settings<br>
+4) Change domain name search settings<br>
+5) Display static routes<br>
+6) Change static routes<br>
+7) Commit changes<br>
+8) Ping a host</p>
 </div>
 </li>
 <li>
 <p>Option 4: Support and Diagnostics</p>
 <div class="paragraph">
-<p>Generate support bundle<br>
-Access diagnostic shell<br>
-Enable remote diagnostic access<br>
-Generate core dump bundle</p>
+<p>1) Generate support bundle<br>
+2) Access diagnostic shell<br>
+3) Enable remote diagnostic access<br>
+4) Generate core dump bundle</p>
 </div>
 </li>
 </ul>
@@ -2218,7 +2192,7 @@ Generate core dump bundle</p>
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2023 NetApp, Inc.</a>
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
             </li>
             <li class="n-footer__copyright-link">
               <a href="https://www.netapp.com/company/legal/terms-of-use/">Terms of Use</a>

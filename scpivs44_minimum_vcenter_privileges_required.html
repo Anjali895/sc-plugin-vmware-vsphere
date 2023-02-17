@@ -233,15 +233,12 @@
           <li class="n-top-hat__list-item">
             <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
           </li>
-          <li class="n-top-hat__list-item">
-            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
-          </li>
         </ul>
       </div>
       <div class="n-top-hat__utils">
         <ul class="n-top-hat__list">
           <li class="n-top-hat__list-item">
-            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
           </li>
         </ul>
       </div>
@@ -325,47 +322,20 @@
         </li><li>
           <a href="https://docs.netapp.com/ja-jp/sc-plugin-vmware-vsphere/scpivs44_minimum_vcenter_privileges_required.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
+          <a href="https://docs.netapp.com/ko-kr/sc-plugin-vmware-vsphere/scpivs44_minimum_vcenter_privileges_required.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
           <a href="https://docs.netapp.com/zh-cn/sc-plugin-vmware-vsphere/scpivs44_minimum_vcenter_privileges_required.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
           <a href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/scpivs44_minimum_vcenter_privileges_required.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/sc-plugin-vmware-vsphere/scpivs44_minimum_vcenter_privileges_required.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/de-de/sc-plugin-vmware-vsphere/scpivs44_minimum_vcenter_privileges_required.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li><li>
           <a href="https://docs.netapp.com/fr-fr/sc-plugin-vmware-vsphere/scpivs44_minimum_vcenter_privileges_required.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
-        </li><li>
-          <a href="https://docs.netapp.com/de-de/sc-plugin-vmware-vsphere/scpivs44_minimum_vcenter_privileges_required.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
   </div>
-  <script>
-    $(function(){
-        var currentLocalization = $('html').attr('lang');
-
-        var localizationsDictionary = {
-            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
-            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
-            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
-            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
-            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
-            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
-            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
-            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
-            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
-            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
-            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
-            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
-            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
-            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
-            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
-        };
-
-        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
-            $('.n-property-bar__property-link').attr('href', '/');
-        }
-    });
-  </script>
   <!-- End property bar -->
 </header>
 
@@ -1848,7 +1818,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-11 14:32:44 +0000">01/11/2022</time>
+    <time datetime="2023-02-16 13:02:43 +0000">02/16/2023</time>
     
   
 
@@ -1922,19 +1892,62 @@ Extension.Unregister</p>
 <div class="sect1">
 <h2 id="required-privileges-specific-to-snapcenter-plug-in-for-vmware-vcenter">Required privileges specific to SnapCenter Plug-in for VMware vCenter</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>netappSCV.Guest.RestoreFile<br>
-netappSCV.Recovery.MountUnMount<br>
-netappSCV.Backup.DeleteBackupJob<br>
-netappSCV.Configure.ConfigureStorageSystems.Delete<br>
-netappSCV.View<br>
-netappSCV.Recovery.RecoverVM<br>
-netappSCV.Configure.ConfigureStorageSystems.AddUpdate<br>
-netappSCV.Backup.BackupNow<br>
-netappSCV.Guest.Configure<br>
-netappSCV.Configure.ConfigureSnapCenterServer<br>
-netappSCV.Backup.BackupScheduled</p>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Privileges</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Label</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.Guest.RestoreFile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guest File Restore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.Recovery.MountUnMount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mount/Unmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.Backup.DeleteBackupJob</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Resource Group/Backup</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.Configure.ConfigureStorageSystems.Delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remove Storage Systems</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.View</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">View</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.Recovery.RecoverVM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recover VM</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.Configure.ConfigureStorageSystems.AddUpdate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add/Modify Storage Systems</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.Backup.BackupNow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backup Now</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.Guest.Configure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guest Configuration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.Configure.ConfigureSnapCenterServer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configure SnapCenter Server</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">netappSCV.Backup.BackupScheduled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Resource Group</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -1953,7 +1966,7 @@ netappSCV.Backup.BackupScheduled</p>
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2023 NetApp, Inc.</a>
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
             </li>
             <li class="n-footer__copyright-link">
               <a href="https://www.netapp.com/company/legal/terms-of-use/">Terms of Use</a>
